@@ -165,3 +165,11 @@ footer {
 .button-small:hover {
     background: #388e3c;
 }
+/* --- Logo Styling --- */
+.header-logo {
+    max-width: 250px; 
+    height: auto;
+    display: block;
+    margin: 0 auto 15px; 
+    border-radius: 5px;
+}
