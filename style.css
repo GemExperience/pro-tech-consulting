@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 2em 0;
+    margin-bottom: 2em;
+}
+
+header h1 {
+    margin-bottom: 0.1em;
+    font-size: 2.5em;
+}
+
+.tagline {
+    font-size: 1.1em;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+#service {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+#service h2 {
+    color: #1e88e5; /* En nuance af blå */
+    margin-top: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+ul li {
+    background: #e3f2fd; /* Lys blå baggrund for listeelementer */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: 5px solid #1e88e5;
+    border-radius: 4px;
+}
+
+.pricing {
+    margin: 30px 0;
+    padding: 20px;
+    border: 2px dashed #1e88e5;
+    border-radius: 8px;
+    background: #f0f8ff;
+}
+
+.pricing h3 {
+    color: #c62828; /* Rød for fremhævning */
+    font-size: 1.8em;
+}
+
+.cta {
+    margin-top: 2em;
+}
+
+.button {
+    display: inline-block;
+    background: #4caf50; /* Grøn knap */
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #388e3c;
+}
+
+.note {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+footer {
+    padding: 1em 0;
+    margin-top: 2em;
+    color: #777;
+    font-size: 0.8em;
+}
