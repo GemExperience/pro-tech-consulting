@@ -106,3 +106,26 @@ footer {
     color: #777;
     font-size: 0.8em;
 }
+/* --- Language Switcher Styling --- */
+.lang-switch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 1.5em;
+}
+
+.lang-switch a {
+    text-decoration: none;
+    padding: 5px;
+    opacity: 0.5;
+    transition: opacity 0.2s;
+}
+
+.lang-switch a:hover {
+    opacity: 0.8;
+}
+
+.lang-switch a.active {
+    opacity: 1.0;
+    border-bottom: 2px solid #1e88e5;
+}
