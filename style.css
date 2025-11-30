@@ -173,3 +173,11 @@ footer {
     margin: 0 auto 15px; 
     border-radius: 5px;
 }
+/* --- Logo Styling --- */
+.header-logo {
+    max-width: 250px; 
+    height: auto;
+    display: block;
+    margin: 0 auto 15px; 
+    border-radius: 5px;
+}
