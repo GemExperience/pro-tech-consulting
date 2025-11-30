@@ -1,0 +1,35 @@
+name: Deploy Static Page to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Trigger udrulning ved pushes til main-branchen
+  workflow_dispatch: # Tillader manuel trigger fra Actions-fanen
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deployment:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Upload hele roden af repository'et (som indeholder index.html og style.css)
+      - name: Upload Artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './' 
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
