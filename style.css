@@ -60,7 +60,7 @@ li {
 }
 
 li strong {
-    font-weight: bold; /* Ensures the list item headers remain bold */
+    font-weight: bold;
 }
 
 .note {
@@ -124,11 +124,11 @@ footer {
 .pricing-table th, .pricing-table td {
     padding: 15px;
     border: 1px solid #ddd;
-    text-align: center; /* Center table content */
+    text-align: center;
 }
 
 .pricing-table thead th {
-    background-color: #1e88e5; /* Blue header */
+    background-color: #1e88e5;
     color: white;
     font-weight: bold;
     text-transform: uppercase;
@@ -146,13 +146,13 @@ footer {
 /* Emphasize price column */
 .pricing-table tbody td:nth-child(3) {
     font-weight: bold;
-    color: #c62828; /* Red price */
+    color: #c62828;
 }
 
 /* Small button styling for the table */
 .button-small {
     display: inline-block;
-    background: #4caf50; /* Green button */
+    background: #4caf50;
     color: white;
     padding: 8px 15px;
     text-decoration: none;
