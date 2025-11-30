@@ -59,6 +59,10 @@ li {
     margin-bottom: 8px;
 }
 
+li strong {
+    font-weight: bold; /* Ensures the list item headers remain bold */
+}
+
 .note {
     margin-top: 20px;
     font-size: 0.9em;
