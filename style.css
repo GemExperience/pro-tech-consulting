@@ -15,26 +15,26 @@ header {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 15px;
-    /* KEY CHANGE: Establishes a positioning context for the logo */
+    /* Establishes positioning context for the logo */
     position: relative;
-    overflow: hidden; /* Ensures the logo doesn't extend beyond the header container */
+    overflow: hidden;
 }
 
 header h1 {
     margin-top: 0;
     font-size: 2.2em;
-    /* Ensures text is above the background logo */
+    /* Ensures text stacks above the background logo */
     position: relative; 
-    z-index: 2;
+    z-index: 100; /* High z-index to guarantee it's on top */
 }
 
 .tagline {
     font-size: 1.0em;
     max-width: 800px;
     margin: 8px auto 0;
-    /* Ensures text is above the background logo */
+    /* Ensures text stacks above the background logo */
     position: relative;
-    z-index: 2;
+    z-index: 100; /* High z-index to guarantee it's on top */
 }
 
 main {
@@ -110,7 +110,7 @@ footer {
     top: 20px;
     right: 20px;
     font-size: 1.5em;
-    z-index: 3; /* Ensure flags are visible */
+    z-index: 300; /* Ensure flags are above everything */
 }
 
 .lang-switch a {
@@ -192,13 +192,13 @@ footer {
 
 /* --- Logo Styling (MODIFIED FOR BACKGROUND EFFECT) --- */
 .header-logo {
-    /* KEY CHANGES: Absolute positioning, z-index, and opacity */
+    /* Absolute positioning is essential for this effect */
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); /* Centers the image perfectly */
-    z-index: 0; /* Puts the image behind the h1 and p tags */
-    max-width: 80%; /* Makes the logo large enough for a watermark */
+    z-index: -1; /* KEY FIX: Pushes the image behind its siblings (h1 and p) */
+    max-width: 80%; /* Large size for watermark */
     height: auto;
     opacity: 0.15; /* Makes it transparent for a subtle effect */
     border-radius: 5px;
