@@ -202,4 +202,103 @@ footer {
     height: auto;
     opacity: 0.15; /* Makes it transparent for a subtle effect */
     border-radius: 5px;
+/* ... [Existing CSS content remains above this line] ... */
+
+/* --- Responsive Design for Mobile (Max 600px width) --- */
+@media (max-width: 600px) {
+    
+    header {
+        padding: 20px 10px; /* Reduce header padding */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Smaller main heading */
+    }
+
+    .tagline {
+        font-size: 0.9em; /* Smaller tagline font */
+        padding: 0 5px;
+    }
+
+    main {
+        padding: 0 10px; /* Reduce main content padding */
+        margin-top: 10px;
+    }
+
+    section {
+        padding: 15px; /* Reduce section padding */
+        margin-bottom: 15px;
+    }
+
+    /* --- Pricing Table Responsiveness --- */
+    .pricing-table table, 
+    .pricing-table thead, 
+    .pricing-table tbody, 
+    .pricing-table th, 
+    .pricing-table td, 
+    .pricing-table tr {
+        display: block; /* Force all table elements to stack vertically */
+    }
+
+    .pricing-table thead {
+        /* Hide table headers (but not screen reader only) */
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .pricing-table tr {
+        border: 1px solid #ccc; /* Add visual separation between services */
+        margin-bottom: 10px;
+        padding: 10px;
+        border-radius: 4px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .pricing-table td {
+        /* Behave like a "row" */
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%; /* Make space for the new label */
+        text-align: right;
+    }
+
+    .pricing-table td:last-child {
+        border-bottom: 0;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 5px;
+    }
+
+    .pricing-table td::before {
+        /* Now like a table header */
+        position: absolute;
+        top: 12px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        font-weight: bold;
+        color: #1e88e5; /* Use primary color for labels */
+    }
+
+    /* Danish Labels for Mobile Pricing Table */
+    .pricing-table table[lang="da"] td:nth-of-type(1)::before { content: "Længde:"; }
+    .pricing-table table[lang="da"] td:nth-of-type(2)::before { content: "Total Tidsblok:"; }
+    .pricing-table table[lang="da"] td:nth-of-type(3)::before { content: "Pris:"; }
+    .pricing-table table[lang="da"] td:nth-of-type(4)::before { content: "Booking:"; }
+    
+    /* English Labels for Mobile Pricing Table */
+    .pricing-table table[lang="en"] td:nth-of-type(1)::before { content: "Service:"; }
+    .pricing-table table[lang="en"] td:nth-of-type(2)::before { content: "Time:"; }
+    .pricing-table table[lang="en"] td:nth-of-type(3)::before { content: "Price:"; }
+    .pricing-table table[lang="en"] td:nth-of-type(4)::before { content: "Action:"; }
+
+    /* Fix the button size on mobile */
+    .button-small {
+        padding: 10px 20px;
+        font-size: 1em;
 }
+
