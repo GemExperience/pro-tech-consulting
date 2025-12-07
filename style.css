@@ -46,10 +46,16 @@ section h2 {
     color: #1e88e5;
     border-bottom: 2px solid #ddd;
     padding-bottom: 8px; /* Reduced padding */
+    margin-top: 15px; /* Added for control */
     margin-bottom: 12px; /* Reduced margin (from 20px) */
 }
 
-/* New: Target paragraphs within sections for tighter spacing */
+/* New style for the second H2 to reduce space between the two internal sections */
+.second-h2 {
+    margin-top: 5px !important; /* Overrides the standard H2 margin */
+}
+
+/* Target paragraphs within sections for tighter spacing */
 section p {
     margin-top: 0;
     margin-bottom: 0.8em; 
