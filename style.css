@@ -1,43 +1,52 @@
 /* General Styling */
 body {
     font-family: Arial, sans-serif;
-    line-height: 1.5; /* Slightly tighter line height */
+    line-height: 1.5;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9; /* Light background */
+    background-color: #f4f4f9;
     color: #333;
 }
 
 header {
-    background-color: #1e88e5; /* Blue header */
+    background-color: #1e88e5;
     color: white;
-    padding: 30px 20px; /* Reduced header top/bottom padding */
+    padding: 30px 20px;
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-bottom: 15px; /* Reduced margin */
+    margin-bottom: 15px;
+    /* KEY CHANGE: Establishes a positioning context for the logo */
+    position: relative;
+    overflow: hidden; /* Ensures the logo doesn't extend beyond the header container */
 }
 
 header h1 {
     margin-top: 0;
-    font-size: 2.2em; /* Slightly smaller font */
+    font-size: 2.2em;
+    /* Ensures text is above the background logo */
+    position: relative; 
+    z-index: 2;
 }
 
 .tagline {
-    font-size: 1.0em; /* Slightly smaller font */
+    font-size: 1.0em;
     max-width: 800px;
-    margin: 8px auto 0; /* Reduced top margin */
+    margin: 8px auto 0;
+    /* Ensures text is above the background logo */
+    position: relative;
+    z-index: 2;
 }
 
 main {
     max-width: 1000px;
-    margin: 15px auto; /* Reduced vertical margin */
+    margin: 15px auto;
     padding: 0 20px;
 }
 
 section {
     background: white;
-    padding: 20px; /* Reduced section padding (from 30px) */
-    margin-bottom: 20px; /* Reduced section margin (from 30px) */
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -45,14 +54,14 @@ section {
 section h2 {
     color: #1e88e5;
     border-bottom: 2px solid #ddd;
-    padding-bottom: 8px; /* Reduced padding */
-    margin-top: 15px; /* Added for control */
-    margin-bottom: 12px; /* Reduced margin (from 20px) */
+    padding-bottom: 8px;
+    margin-top: 15px;
+    margin-bottom: 12px;
 }
 
-/* New style for the second H2 to reduce space between the two internal sections */
+/* Style for the second H2 to reduce space between the two internal sections */
 .second-h2 {
-    margin-top: 5px !important; /* Overrides the standard H2 margin */
+    margin-top: 5px !important;
 }
 
 /* Target paragraphs within sections for tighter spacing */
@@ -65,12 +74,12 @@ ul {
     list-style: disc;
     margin-left: 20px;
     padding-left: 0;
-    margin-top: 0.5em; /* Added for control */
-    margin-bottom: 1.2em; /* Reduced bottom margin on lists */
+    margin-top: 0.5em;
+    margin-bottom: 1.2em;
 }
 
 li {
-    margin-bottom: 4px; /* Reduced margin between list items (from 8px) */
+    margin-bottom: 4px;
 }
 
 li strong {
@@ -78,17 +87,17 @@ li strong {
 }
 
 .note {
-    margin-top: 15px; /* Reduced top margin (from 20px) */
+    margin-top: 15px;
     font-size: 0.9em;
     color: #666;
     border-top: 1px dashed #ccc;
-    padding-top: 8px; /* Reduced padding (from 10px) */
+    padding-top: 8px;
 }
 
 footer {
     text-align: center;
-    padding: 15px; /* Reduced padding (from 20px) */
-    margin-top: 20px; /* Reduced top margin (from 30px) */
+    padding: 15px;
+    margin-top: 20px;
     background-color: #ddd;
     color: #333;
     font-size: 0.85em;
@@ -101,6 +110,7 @@ footer {
     top: 20px;
     right: 20px;
     font-size: 1.5em;
+    z-index: 3; /* Ensure flags are visible */
 }
 
 .lang-switch a {
@@ -122,8 +132,8 @@ footer {
 
 /* --- Pricing Table Styling --- */
 .pricing-table {
-    margin: 20px 0; /* Reduced margin (from 30px) */
-    padding: 10px 0; /* Reduced padding (from 20px) */
+    margin: 20px 0;
+    padding: 10px 0;
 }
 
 .pricing-table table {
@@ -136,7 +146,7 @@ footer {
 }
 
 .pricing-table th, .pricing-table td {
-    padding: 12px; /* Reduced padding (from 15px) */
+    padding: 12px;
     border: 1px solid #ddd;
     text-align: center;
 }
@@ -179,11 +189,17 @@ footer {
 .button-small:hover {
     background: #388e3c;
 }
-/* --- Logo Styling --- */
+
+/* --- Logo Styling (MODIFIED FOR BACKGROUND EFFECT) --- */
 .header-logo {
-    max-width: 250px; 
+    /* KEY CHANGES: Absolute positioning, z-index, and opacity */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image perfectly */
+    z-index: 0; /* Puts the image behind the h1 and p tags */
+    max-width: 80%; /* Makes the logo large enough for a watermark */
     height: auto;
-    display: block;
-    margin: 0 auto 15px; 
+    opacity: 0.15; /* Makes it transparent for a subtle effect */
     border-radius: 5px;
 }
