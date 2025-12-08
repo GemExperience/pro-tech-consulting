@@ -1,20 +1,26 @@
-/* General Styling */
+/* General Styling - DARK THEME */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #121212; /* Black/Very Dark Background */
+    color: #E0E0E0; /* Light Grey Text */
+}
+
+/* Accent Color */
+:root {
+    --accent-blue: #42a5f5; /* Lighter blue for dark backgrounds */
+    --surface-dark: #1E1E1E; /* Dark surface color for sections */
 }
 
 header {
-    /* Updated background color for more professional feel */
-    background: linear-gradient(135deg, #1e88e5 0%, #0d47a1 100%);
+    /* Retained blue gradient, adjusted for dark theme contrast */
+    background: linear-gradient(135deg, #0d47a1 0%, #1e88e5 100%);
     color: white;
-    padding: 40px 20px; /* Increased padding */
+    padding: 40px 20px;
     text-align: center;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
     margin-bottom: 20px;
     position: relative;
     overflow: hidden;
@@ -22,26 +28,28 @@ header {
 
 header h1 {
     margin-top: 0;
-    font-size: 2.5em; /* Slightly larger title */
+    font-size: 2.5em;
     position: relative;
     z-index: 100;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Text shadow for pop */
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); 
 }
 
-/* Updated Tagline style for less text, higher visual impact */
+/* Tagline style for less text, higher visual impact */
 .tagline {
-    font-size: 1.2em; /* Larger font */
-    font-weight: 600; /* Bolder */
+    font-size: 1.2em;
+    font-weight: 600;
     max-width: 800px;
     margin: 10px auto 0;
     position: relative;
     z-index: 100;
     padding: 10px;
-    border: 2px solid #ffeb3b; /* Yellow border to make it stand out */
-    background-color: rgba(0, 0, 0, 0.1); /* Slight dark background for contrast */
+    /* High contrast border and background */
+    border: 2px solid #FFCC80; /* Light Orange/Amber border */
+    background-color: rgba(255, 255, 255, 0.05); /* Very slight white background */
     border-radius: 8px;
     line-height: 1.4;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF; /* Ensure tagline text is pure white */
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
 }
 
 header::after {
@@ -56,7 +64,7 @@ header::after {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.15; /* Increased opacity slightly for better visibility */
+    opacity: 0.08; /* Low opacity on dark background */
     transform: translate(-50%, -50%);
     z-index: 50; 
 }
@@ -68,16 +76,16 @@ main {
 }
 
 section {
-    background: white;
+    background: var(--surface-dark); /* Dark section background */
     padding: 25px;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Darker shadow for depth */
 }
 
 section h2 {
-    color: #1e88e5;
-    border-bottom: 2px solid #eee;
+    color: var(--accent-blue); /* Blue accent color */
+    border-bottom: 2px solid #333; /* Darker border */
     padding-bottom: 10px;
     margin-top: 0;
     font-size: 1.8em;
@@ -90,7 +98,7 @@ ul {
 
 ul li {
     padding: 5px 0;
-    border-bottom: 1px dotted #eee;
+    border-bottom: 1px dotted #333; /* Darker border */
 }
 
 ul li:last-child {
@@ -99,11 +107,11 @@ ul li:last-child {
 
 .note {
     font-style: italic;
-    color: #777;
+    color: #BBBBBB; /* Lighter text color */
     margin-top: 20px;
     padding: 10px;
-    background-color: #e3f2fd;
-    border-left: 5px solid #1e88e5;
+    background-color: #0D3A63; /* Dark blue background */
+    border-left: 5px solid var(--accent-blue);
     border-radius: 4px;
 }
 
@@ -117,17 +125,17 @@ ul li:last-child {
 .pricing-table table {
     width: 100%;
     border-collapse: collapse;
-    min-width: 600px; /* Ensure table is legible on desktop */
+    min-width: 600px;
 }
 
 .pricing-table th, .pricing-table td {
-    border: 1px solid #ddd;
+    border: 1px solid #333; /* Dark border */
     padding: 12px;
     text-align: left;
 }
 
 .pricing-table th {
-    background-color: #1e88e5;
+    background-color: var(--accent-blue);
     color: white;
     font-weight: bold;
     text-transform: uppercase;
@@ -135,35 +143,38 @@ ul li:last-child {
 }
 
 .pricing-table tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: #252525; /* Slightly darker stripe */
+}
+.pricing-table tr:nth-child(odd) {
+    background-color: var(--surface-dark);
 }
 
 .pricing-table tr:hover {
-    background-color: #f0f8ff;
+    background-color: #3A3A3A; /* Hover state in dark grey */
 }
 
 .pricing-table td:nth-child(3) {
     font-weight: bold;
-    color: #c62828; /* Highlight price */
+    color: #F44336; /* Red highlight price */
 }
 
 /* Button Styling for Booking */
 .button-small {
     display: inline-block;
     padding: 8px 15px;
-    background-color: #ff9800; /* Amber/Orange color */
+    background-color: #FF9800; /* Amber/Orange color */
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.1s ease;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
 .button-small:hover {
     background-color: #fb8c00;
     transform: translateY(-1px);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 /* Footer Styling */
@@ -171,7 +182,7 @@ footer {
     text-align: center;
     padding: 20px;
     margin-top: 30px;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid #333; /* Dark border */
     color: #777;
     font-size: 0.9em;
 }
@@ -194,19 +205,19 @@ footer {
     }
 
     .pricing-table tr {
-        border-bottom: 3px solid #ddd;
+        border-bottom: 3px solid #333; /* Dark border */
         display: block;
         margin-bottom: .625em;
+        background-color: var(--surface-dark) !important; /* Ensure consistent background */
     }
 
     .pricing-table td {
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #333; /* Dark border */
         display: block;
         text-align: right;
     }
 
     .pricing-table td::before {
-        /* Now like a table header */
         position: absolute;
         top: 12px;
         left: 6px;
@@ -215,7 +226,7 @@ footer {
         white-space: nowrap;
         text-align: left;
         font-weight: bold;
-        color: #1e88e5; /* Use primary color for labels */
+        color: var(--accent-blue); 
     }
 
     /* Danish Labels for Mobile Pricing Table */
@@ -230,7 +241,6 @@ footer {
     .pricing-table table[lang="en"] td:nth-of-type(3)::before { content: "Price (USD):"; }
     .pricing-table table[lang="en"] td:nth-of-type(4)::before { content: "Booking:"; }
     
-    /* Ensure the button is centered on mobile */
     .pricing-table td:last-child {
         border-bottom: 0;
         text-align: center;
