@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musikudstyr & Session Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font import for a clean look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f4f7f9;
+        }
+        .status-pill {
+            padding: 4px 10px;
+            border-radius: 9999px;
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: inline-flex;
+            align-items: center;
+        }
+        .pill-session { background-color: #e0f2fe; color: #0284c7; } /* Sky-200 / Sky-600 */
+        .pill-rent { background-color: #fef3c7; color: #d97706; }    /* Amber-100 / Amber-600 */
+        .pill-sale { background-color: #fce7f3; color: #c026d3; }    /* Pink-100 / Fuchsia-600 */
+    </style>
+</head>
+<body class="p-4 sm:p-8">
+
+    <div class="max-w-7xl mx-auto bg-white shadow-xl rounded-xl p-6 sm:p-10">
+
+        <!-- Header and Introduction -->
+        <header class="mb-8 border-b pb-4">
+            <h1 class="text-4xl font-extrabold text-gray-900 mb-2">Musikudstyr & Session Services</h1>
+            <p class="text-lg text-gray-600">
+                Et udvalg af professionelt udstyr af høj kvalitet, tilgængeligt til brug i sessionsoptagelser, korttidsudlejning eller køb. Denne liste afspejler GME EX's studieinventar.
+            </p>
+        </header>
+
+        <!-- Gear Inventory Table -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold text-gray-800 mb-6">Fuldstændig Udstysoversigt (Udstyrsliste)</h2>
+
+            <!-- Desktop Table View (Translated) -->
+            <div class="hidden md:block overflow-x-auto shadow ring-1 ring-black ring-opacity-5 rounded-lg">
+                <table class="min-w-full divide-y divide-gray-300">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col" class="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6">Genstand (DA) / Model</th>
+                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">Kategori</th>
+                            <th scope="col" class="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">I/O & Noter</th>
+                            <th scope="col" class="px-3 py-3.5 text-center text-sm font-semibold text-gray-900">Tilgængelighed</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200 bg-white">
+                        <!-- RME HDSPe RayDAT -->
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">RME HDSPe RayDAT</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Audio Interface (PCIe)</td>
+                            <td class="px-3 py-4 text-sm text-gray-500 max-w-xs">Højkanals (36 I/O) PCIe-interface til ultra-lav latency. Inkluderer 2x 5-bens DIN MIDI I/O.</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                <span class="status-pill pill-session mr-1">Session</span>
+                            </td>
+                        </tr>
+                        <!-- RME ADI-2 -->
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">RME ADI-2 AD/DA</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">A/D D/A Konverter</td>
+                            <td class="px-3 py-4 text-sm text-gray-500 max-w-xs">Premium 2-kanals konverter. I/O: 2x Bal XLR Ind, 4x Bal XLR Ud (omskiftelige niveauer) + 1/4" Telefonudgange.</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                <span class="status-pill pill-session mr-1">Session</span>
+                                <span class="status-pill pill-rent">Leje</span>
+                            </td>
+                        </tr>
+                        <!-- RME BabyFace -->
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">RME BabyFace</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Audio Interface</td>
+                            <td class="px-3 py-4 text-sm text-gray-500 max-w-xs">Bærbar, high-fidelity interface. I/O: 3x Bal XLR/Line Ind, 4x Bal XLR/TRS Ud + 1/4" Telefonudgang.</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                <span class="status-pill pill-session mr-1">Session</span>
+                                <span class="status-pill pill-rent">Leje</span>
+                            </td>
+                        </tr>
+                        <!-- DPA 4060-FM -->
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">DPA 4060-FM (Beige)</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Kondensator Mikrofon</td>
+                            <td class="px-3 py-4 text-sm text-gray-500 max-w-xs">Miniature omnidirektionel kondensatormikrofon. Fremragende til akustiske instrumenter og diskret live brug.</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                <span class="status-pill pill-session mr-1">Session</span>
+                                <span class="status-pill pill-rent">Leje</span>
+                            </td>
+                        </tr>
+                        <!-- Ableton Push 2 -->
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">Ableton Push 2</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Kontrolflade / Instrument</td>
+                            <td class="px-3 py-4 text-sm text-gray-500 max-w-xs">Højtydende musikproduktionscontroller. USB MIDI I/O. Strøm: 12V DC 1.25A.</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                <span class="status-pill pill-session mr-1">Session</span>
+                                <span class="status-pill pill-rent">Leje</span>
+                            </td>
+                        </tr>
+                        <!-- Boomerang Phrase Sampler III (x2) -->
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">Boomerang Phrase Sampler III (x2 enheder)</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">4-Kanals Stereo Looper</td>
+                            <td class="px-3 py-4 text-sm text-gray-500 max-w-xs">Professionel looping med 4 kanaler. I/O: 2x 1/4" Ubal Ind/Ud (-10db). MIDI I/O.</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                <span class="status-pill pill-session mr-1">Session</span>
+                                <span class="status-pill pill-rent">Leje</span>
+                            </td>
+                        </tr>
+                         <!-- CME U6 MIDI Pro (x3) -->
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">CME U6 MIDI Pro (x3 enheder)</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">MIDI Router / Filter</td>
+                            <td class="px-3 py-4 text-sm text-gray-500 max-w-xs">Avanceret USB-C drevet router/filter. Hver enhed tilbyder 3x 5-bens DIN I/O og 3x USB MIDI I/O.</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                <span class="status-pill pill-session mr-1">Session</span>
+                            </td>
+                        </tr>
+                        <!-- Line 6 Relay XD-V75 -->
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">Line 6 Relay XD-V75 Wireless System</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Digital Trådløs Modtager</td>
+                            <td class="px-3 py-4 text-sm text-gray-500 max-w-xs">Premium digitalt system. I/O: 2x XLR + Ubalanceret Jack. Pålidelig 2.4GHz ydeevne.</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                <span class="status-pill pill-session mr-1">Session</span>
+                                <span class="status-pill pill-rent mr-1">Leje</span>
+                                <span class="status-pill pill-sale">Salg</span>
+                            </td>
+                        </tr>
+                        <!-- Electro-Harmonix Tone Tattoo -->
+                        <tr>
+                            <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-6">Electro-Harmonix Tone Tattoo</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500">Multi-Effekt Pedal</td>
+                            <td class="px-3 py-4 text-sm text-gray-500 max-w-xs">Kombinerer Distortion, Chorus og Delay. Standard 1/4" Ubalanceret Instrument Jack I/O.</td>
+                            <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                <span class="status-pill pill-session mr-1">Session</span>
+                                <span class="status-pill pill-rent">Leje</span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Mobile List View (Translated) -->
+            <div class="md:hidden space-y-4">
+                <!-- RME HDSPe RayDAT -->
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <div class="text-lg font-bold text-gray-900">RME HDSPe RayDAT</div>
+                    <div class="text-sm text-gray-600 mb-2">Kategori: Audio Interface (PCIe)</div>
+                    <p class="text-sm text-gray-500 mb-3">Noter: Højkanals (36 I/O) PCIe-interface til ultra-lav latency. Inkluderer 2x 5-bens DIN MIDI I/O.</p>
+                    <div class="flex flex-wrap gap-2"><span class="status-pill pill-session">Session</span></div>
+                </div>
+                <!-- RME ADI-2 -->
+                 <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <div class="text-lg font-bold text-gray-900">RME ADI-2 AD/DA</div>
+                    <div class="text-sm text-gray-600 mb-2">Kategori: A/D D/A Konverter</div>
+                    <p class="text-sm text-gray-500 mb-3">Noter: Premium 2-kanals konverter. I/O: 2x Bal XLR Ind, 4x Bal XLR Ud (omskiftelige niveauer) + 1/4" Telefonudgange.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="status-pill pill-session">Session</span>
+                        <span class="status-pill pill-rent">Leje</span>
+                    </div>
+                </div>
+                 <!-- DPA 4060-FM -->
+                 <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <div class="text-lg font-bold text-gray-900">DPA 4060-FM (Beige)</div>
+                    <div class="text-sm text-gray-600 mb-2">Kategori: Kondensator Mikrofon</div>
+                    <p class="text-sm text-gray-500 mb-3">Noter: Miniature omnidirektionel kondensatormikrofon. Fremragende til akustiske instrumenter og diskret live brug.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="status-pill pill-session">Session</span>
+                        <span class="status-pill pill-rent">Leje</span>
+                    </div>
+                </div>
+                 <!-- Ableton Push 2 -->
+                 <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <div class="text-lg font-bold text-gray-900">Ableton Push 2</div>
+                    <div class="text-sm text-gray-600 mb-2">Kategori: Kontrolflade / Instrument</div>
+                    <p class="text-sm text-gray-500 mb-3">Noter: Højtydende musikproduktionscontroller. USB MIDI I/O. Strøm: 12V DC 1.25A.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="status-pill pill-session">Session</span>
+                        <span class="status-pill pill-rent">Leje</span>
+                    </div>
+                </div>
+                <!-- Line 6 Relay XD-V75 -->
+                <div class="bg-gray-50 p-4 rounded-lg shadow">
+                    <div class="text-lg font-bold text-gray-900">Line 6 Relay XD-V75 Wireless System</div>
+                    <div class="text-sm text-gray-600 mb-2">Kategori: Digital Trådløs Modtager</div>
+                    <p class="text-sm text-gray-500 mb-3">Noter: Premium digitalt system. I/O: 2x XLR + Ubalanceret Jack. Pålidelig 2.4GHz ydeevne.</p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="status-pill pill-session">Session</span>
+                        <span class="status-pill pill-rent">Leje</span>
+                        <span class="status-pill pill-sale">Salg</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Full Inventory Acknowledgment (Translated) -->
+            <div class="mt-8 p-4 bg-gray-100 rounded-lg text-sm text-gray-700">
+                <p class="font-semibold mb-1">Bemærkning om Fuld Inventar & Software:</p>
+                <p>Det fulde studieinventar inkluderer mange yderligere enheder til rådighed for sessionsarbejde: Boomerang Side Car (x2), Novation ReMote SL MkII, Alesis Performance Pad Pro, Ableton Push 1, Line 6 Relay G30 (x3), Line 6 Relay XD-V70, forskellige pedaler (Carl Martin Blue Ranger, Boss LS-2, Zoom 505), og flere CME U6 MIDI Pro routere (x3). Hovedtelefonlager inkluderer to beyerdynamic DT 770-modeller.</p>
+                <p class="mt-2">Software & Plugins: Ableton Live 12 Suite, Cockos Reaper 7, XLN Audio Addictive Keys, Electric Grand, Mark One, og Studio Grand er også tilgængelige for projektarbejde.</p>
+            </div>
+        </section>
+
+        <!-- Service Information (Translated) -->
+        <section class="mt-12 pt-6 border-t border-gray-200">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Service Muligheder (Session, Leje, Salg)</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Session Musician -->
+                <div class="p-5 border border-blue-200 rounded-lg bg-blue-50 shadow-md">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v14L9 19zm0 0a2 2 0 110-4 2 2 0 010 4zM19 19a2 2 0 110-4 2 2 0 010 4z"></path></svg>
+                        Sessionsarbejde
+                    </h3>
+                    <p class="text-gray-700 text-sm">
+                        Jeg kan medbringe og betjene det markerede udstyr til dine studie- eller live-sessioner. Inkluderer professionel opsætning og garanteret ekspertise. Time- eller projektrater gælder.
+                    </p>
+                </div>
+
+                <!-- Equipment Rental -->
+                <div class="p-5 border border-amber-300 rounded-lg bg-amber-50 shadow-md">
+                    <h3 class="text-xl font-semibold text-amber-700 mb-2 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c1.657 0 3 .895 3 2s-1.343 2-3 2h-1v-4h1zM5 12h4m12 0h-4"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17H7a2 2 0 01-2-2V9a2 2 0 012-2h10a2 2 0 012 2v6a2 2 0 01-2 2z"></path></svg>
+                        Korttidsudlejning (Leje)
+                    </h3>
+                    <p class="text-gray-700 text-sm">
+                        Udstyr markeret "Leje" er tilgængeligt for korttidsleje. Kræver depositum og underskrevet lejeaftale. Kontakt for daglig/ugepris (DKK).
+                    </p>
+                </div>
+
+                <!-- For Sale -->
+                <div class="p-5 border border-fuchsia-300 rounded-lg bg-fuchsia-50 shadow-md">
+                    <h3 class="text-xl font-semibold text-fuchsia-700 mb-2 flex items-center">
+                        <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10m0 0v10m0-10L7 17"></path></svg>
+                        Til Salg (Salg)
+                    </h3>
+                    <p class="text-gray-700 text-sm">
+                        Specifikke genstande er tilgængelige for køb, ofte inklusive tilbehør (kasser, pedaler). Pris efter forespørgsel. Kun seriøse henvendelser.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact Placeholder -->
+        <footer class="mt-10 pt-6 border-t text-center text-gray-500">
+            <p>For priser, booking eller forespørgsler, kontakt venligst: <strong class="text-gray-800">your.email@example.com</strong></p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
